@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Loan | Transparent Glass Banking</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <nav class="glass-nav">
+    <div class="brand">Aura<span>Loan</span></div>
+    <ul class="nav-links">
+      <li><a href="#calculator">Calculator</a></li>
+      <li><a href="#apply" class="btn-primary">Apply Now</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header class="hero-section">
+      <h1 class="glass-text">Borrow simply, transparently.</h1>
+      <p>Instant estimates, zero hidden fees, and fast approvals.</p>
+    </header>
+
+    <section id="calculator" class="glass-card calculator-card">
+      <h2>Loan Estimate Calculator</h2>
+      
+      <div class="control-group">
+        <div class="label-row">
+          <label for="loan-amount">Borrowing Amount</label>
+          <span class="value-badge" id="amount-val">R 25,000</span>
+        </div>
+        <input type="range" id="loan-amount" min="2000" max="150000" step="1000" value="25000" />
+      </div>
+
+      <div class="control-group">
+        <div class="label-row">
+          <label for="loan-period">Repayment Term</label>
+          <span class="value-badge" id="period-val">12 Months</span>
+        </div>
+        <input type="range" id="loan-period" min="3" max="60" step="1" value="12" />
+      </div>
+
+      <div class="results-grid">
+        <div class="result-box">
+          <small>Monthly Payment</small>
+          <div class="stat-highlight" id="monthly-payment">R 2,219</div>
+        </div>
+        <div class="result-box">
+          <small>Estimated Interest (11.75%)</small>
+          <div class="stat" id="total-interest">R 1,628</div>
+        </div>
+        <div class="result-box">
+          <small>Total Repayment</small>
+          <div class="stat" id="total-payment">R 26,628</div>
+        </div>
+      </div>
+
+      <a href="#apply" class="btn-submit">Proceed with this Plan</a>
+    </section>
+
+    <section id="apply" class="glass-card form-card">
+      <h2>Quick Application</h2>
+      <form id="loan-form">
+        <div class="input-grid">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+          <div class="field">
+            <label>Monthly Net Income</label>
+            <input type="number" placeholder="e.g. 25000" required />
+          </div>
+          <div class="field">
+            <label>Employment Status</label>
+            <select required>
+              <option value="" disabled selected>Select status</option>
+              <option value="employed">Permanently Employed</option>
+              <option value="contract">Fixed Contract</option>
+              <option value="self">Self-Employed / Business</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary full-width">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
